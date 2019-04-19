@@ -1,0 +1,78 @@
+/*
+Theme Name: Thema van Tin Xian
+Author: Tin Xian Hu
+Author URL: https://www.tinxian.nl/
+Version: 1.0
+
+*/
+body {
+  font-family: sans-serif;
+  color: #333;
+  margin: 0;
+  min-height: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  color: royalblue;
+}
+
+/* layout */
+.bericht {
+  border-bottom: 6px double royalblue;
+}
+
+.bericht:last-of-type {
+  border-bottom: 0;
+}
+
+.container {
+  padding: 2em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* opmaak header */
+header {
+  background: royalblue;
+  color: #fff;
+  background-size: cover;
+  background-position: center center;
+  min-height: 30vw;
+}
+
+header a {
+  color: #fff;
+}
+
+/* opmaak menu */
+
+nav ul.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+}
+
+nav .menu a {
+  text-decoration: none;
+  display: block;
+  background-color: royalblue;
+  padding: .5em 2em;
+}
+
+nav .menu a:hover {
+  background-color: blue;
+}
+
+/* opmaak footer */
+footer {
+  background: royalblue;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
