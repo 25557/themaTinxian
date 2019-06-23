@@ -16,3 +16,9 @@ for (let i = 0; i < heeftSubmenu.length; i++) {
     linkSubmenu.classList.toggle('menu-is-open');
   })
 }
+
+// placeholder tekst en type zoekvenster
+// stop de input search in een variabele
+let zoekVenster = document.getElementById('s');
+zoekVenster.setAttribute('placeholder','Zoeken...');
+zoekVenster.setAttribute('type','search');

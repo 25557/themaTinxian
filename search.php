@@ -4,6 +4,7 @@ get_header();
 <div class="container">
 <main>
   <div>
+    <h2>De zoekresultaten voor <em class="zoek-term-in-kop"><?php echo get_search_query(); ?></em></h2>
 <?php
  // De wordpress loop
  if ( have_posts() ) :
@@ -11,16 +12,17 @@ get_header();
 
 <article class="bericht">
 <a href="<?php the_permalink() ?>">
-  <h2>
+  <h3>
     <?php the_title()?>
-  </h2>
+  </h3>
 </a>
 <?php the_content()?>
 </article>
 <!-- einde container -->
 <?php endwhile;
 else :
-echo '<p>Er zijn geen berichten gevonden.</p>';
+echo 'Geen berichten gevonden voor de zoekterm <em class="zoek-term-in-kop">'.get_search_query();?></em>
+<?php
 endif;
 // einde Wordpress loop
 ?>

@@ -6,7 +6,7 @@ Version: 1.0
 
 */
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333;
   margin: 0;
   min-height: 100vw;
@@ -47,6 +47,19 @@ header {
   min-height: 20vw;
 }
 
+header p, h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+header>.container>a {
+  text-decoration: none;
+}
+
+header>.container>a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
 header a {
   color: #fff;
 }
@@ -81,43 +94,81 @@ nav .menu .current-menu-item a {
   border-right: .3em solid red;
 }
 
- /* het submenu */
- .sub-menu {
-   list-style-type: none;
-   margin: 0;
-   padding-left: 1em;
- }
- 
- .sub-menu * {
-   transition: all .5s ease-out;
- }
+/* het submenu */
+.sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1em;
+}
 
- .sub-menu.menu-verbergen {
-   height: 0;
-   font-size: 0;
-   line-height: 0;
-   padding: 0;
-   border-width: 0;
- }
+.sub-menu * {
+  transition: all .5s ease-out;
+}
 
- .menu-item-has-children>a::before {
-   content: '\25BC';
-   margin-right: 2em;
- }
+.sub-menu.menu-verbergen {
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  border-width: 0;
+}
 
- .menu-item-has-children>a.menu-is-open::before {
-   content: '\25B2';
-   margin-right: 2em;
- }
+.menu-item-has-children>a::before {
+  content: '\25BC';
+  margin-right: 2em;
+}
 
- .sub-menu a {
-   border-left: 1em solid blue;
- }
+.menu-item-has-children>a.menu-is-open::before {
+  content: '\25B2';
+  margin-right: 2em;
+}
+
+.sub-menu a {
+  border-left: 1em solid blue;
+}
+.zoek-term-in-kop {
+  color: royalblue;
+}
+
+aside h4 {
+  color: royalblue;
+}
+.screen-reader-text {
+  display: none;
+}
+.postMetaData {
+  font-size: .8em;
+  color: #aaa;
+}
+.postMetaData a {
+  color: #aaa;
+}
+.postMetaData a:hover {
+  color: royalblue;
+}
+.postMetaData ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.postMetaData li {
+  display: inline;
+}
+.postMetaData li:after {
+  content: " | ";
+}
 
 @media screen and (min-width: 850px) {
+  header .container {
+    border-right: 1px solid #eee;
+    min-height: 20vw;
+    margin-bottom: -2em;
+  }
   nav ul.menu {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    border-left: 1px solid;
   }
 
   nav ul.menu a {
@@ -127,7 +178,18 @@ nav .menu .current-menu-item a {
   nav #menu-footermenu a {
     font-size: .8em;
   }
+
+  main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-column-gap: 5em;
+  }
+  aside {
+    border-right: 1px solid royalblue;
+    margin-right: -2em;
+  }
 }
+
 /* opmaak submenu */
 .sub-menu {
   position: absolute;
